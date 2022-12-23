@@ -7,8 +7,8 @@ const addBookHandler = (request, h) => {
  
   const id = nanoid(16);
   const finished = (pageCount === readPage);
-  const insertAt = new Date().toISOString();
-  const updatedAt = insertAt;
+  const insertedAt = new Date().toISOString();
+  const updatedAt = insertedAt;
 
   
   if (name === undefined) {
@@ -32,7 +32,7 @@ const addBookHandler = (request, h) => {
   }
   
   const newBook = {
-    name, year, author, summary, publisher, pageCount, readPage, reading, id, finished, insertAt, updatedAt,
+    name, year, author, summary, publisher, pageCount, readPage, reading, id, finished, insertedAt, updatedAt,
   };
   books.push(newBook);
 
